@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎓 Student Management</h1>
+
+    <form id="studentForm" class="form-card">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="regNo" placeholder="Reg Number" required>
+      <input type="text" id="course" placeholder="Course">
+      <input type="email" id="email" placeholder="Email">
+      <button type="submit">Add Student</button>
+    </form>
+
+    <input type="text" id="search" placeholder="🔍 Search students...">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Reg No</th>
+          <th>Course</th>
+          <th>Email</th>
+          <th>Attendance</th>
+          <th>Grades</th>
+          <th>Actions</th>
+          <th>Schedule</th>
+        </tr>
+      </thead>
+      <tbody id="studentList"></tbody>
+    </table>
+  </div>
+  <div class="extra-sections">
+  <!-- Attendance -->
+  <div class="card">
+    <h2>📅 Attendance</h2>
+    <input type="text" id="attendanceReg" placeholder="Reg Number">
+    <button onclick="markAttendance()">Mark Present</button>
+  </div>
+
+  <!-- Grading -->
+  <div class="card">
+    <h2>📊 Grades</h2>
+    <input type="text" id="gradeReg" placeholder="Reg Number">
+    <input type="text" id="gradeValue" placeholder="Grade (A, B, 80...)">
+    <button onclick="addGrade()">Add Grade</button>
+  </div>
+
+  <!-- Schedule -->
+  <div class="card">
+    <h2>🗓 Schedule</h2>
+    <input type="text" id="scheduleReg" placeholder="Reg Number">
+    <input type="text" id="scheduleText" placeholder="e.g. Mon 10AM - Web Dev">
+    <button onclick="addSchedule()">Add Schedule</button>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+  <footer>
+  <p>© 2026 Student Management System | Designed by <strong>Gavin Oduor</strong></p>
+</footer>
+</body>
+</html>
